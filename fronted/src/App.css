@@ -1,0 +1,11 @@
+a {
+color:#1CD6CE;
+text-decoration:none;
+  font-weight: bold;
+  font-size: 1.2rem;      
+}
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}

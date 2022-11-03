@@ -3,6 +3,7 @@ import Home from "./Pages/Home";
 import Login from "./Pages/Login";
 import AddBlog from "./Pages/AddBlog";
 
+import './App.css';
 function App() {
   return (
     
@@ -17,7 +18,7 @@ function App() {
     // <>
     // <p>gdjtdrdyugfuf7yf</p></>
   
-  );
+  )
 }
 
 export default App;
