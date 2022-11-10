@@ -5,6 +5,7 @@ import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
 
 
 
+
 const Container = styled.div`
  background:#1CD6CE;
  height:120vh;
@@ -55,17 +56,16 @@ margin:1em;
 border-bottom:2px solid red;
 `
 const LogInButton = styled.button`
-padding:1em 3em;
-border-radius:6px;
+padding:.8em 2em;
+border-radius:19px;
  margin:0 auto;
- width:fit-content;
  background:#1CD6CE;
  color:#293462;
  font-weight:bold;
  font-size:1rem;
- border-radius:50%;
  cursor:pointer;
  text-transform:uppercase;
+ 
 `
 const ConfirmContain = styled.div`
 display:flex;
@@ -81,7 +81,9 @@ flex-direction:column;
 justify-content:center;
 align-items:center;
 `
-
+const Button = styled.div`
+margin:1em;
+`
 
 const LoginItems = () => {
     const [visible, setvisible] = useState(false)
@@ -118,7 +120,10 @@ const LoginItems = () => {
 
                         </ConfirmContain>
                     </AuthenticatorResponse>
-                    <LogInButton>login</LogInButton>
+                    
+                    <Button class="wrap">
+                        <LogInButton class="button">login</LogInButton >
+                    </Button>
                 </LoginEmailPasswardButton>
             </LoginContainer>
         </Container>

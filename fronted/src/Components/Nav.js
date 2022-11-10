@@ -14,9 +14,21 @@ margin:0 auto;
 width:70%;  
 `
 const NavLeft = styled.div``
+const LogoContain = styled.div`
+width:120px;
+color:#293462;
+height:120px;
+border:2px solid #293462;
+border-radius:50%;
+background:#1CD6CE;
+display:flex;
+align-items:center;
+cursor:pointer;
+box-shadow:2px 2px 8px #1CD6CE;
+
+`
 const Logo = styled.h2`
 font-weight:bold;
-color:#1CD6CE;
 text-transform:uppercase;
 font-style:italic;
 font-size:1.8rem;
@@ -34,6 +46,12 @@ display:flex;
 gap:2rem;
 list-style-type:none;
 
+`
+const SmallContain = styled.div`
+border:2px solid #1CD6CE;
+padding:.5em;
+border-radius:6px;
+background:#1CD6CE;
 
 `
 const ListItems = styled.li`
@@ -48,7 +66,7 @@ padding:.3em;
 color:#1CD6CE;
 font-weight:bold;
 `
-const IconContain=styled.div``
+const IconContain = styled.div``
 const InnerContain = styled.div`
 display:flex;
 border:2px solid #1CD6CE;
@@ -57,7 +75,7 @@ padding:.3em;
 color:#1CD6CE;
 margin:1.9em;
 `
-const InputContain=styled.div``
+const InputContain = styled.div``
 const Nav = () => {
     return (
         <Container>
@@ -66,8 +84,11 @@ const Nav = () => {
                     <ListUl>
 
                         <ListItems>
-
-                            <Logo>blog.</Logo>
+                                <Link to="/">
+                            <LogoContain>
+                                    <Logo>blog.</Logo>
+                            </LogoContain>
+                            </Link>
                         </ListItems>
                     </ListUl>
                 </NavLeft>
@@ -75,24 +96,29 @@ const Nav = () => {
                 <NavCenter>
                     <ListUl>
                         <ListItems>
-                    <InnerContain>
+                            <InnerContain>
                                 <IconContain>
                                     <SearchIcon />
                                 </IconContain>
                                 <InputContain>
-                            <Textinput type="Text" placeholder="Search" />
+                                    <Textinput type="Text" placeholder="Search" />
                                 </InputContain>
-                    </InnerContain>
+                            </InnerContain>
                         </ListItems>
-                        </ListUl>
+                    </ListUl>
                 </NavCenter>
 
                 <NavRight>
                     <ListUl>
-
-                        <ListItems><Link to="/">Home  </Link></ListItems>
-                        <ListItems><Link to="/login">Login/SigIn</Link></ListItems>
-                        <ListItems><Link to="/addblog">Add blog</Link></ListItems>
+                        <SmallContain>
+                            <ListItems><Link to="/">Home  </Link></ListItems>
+                        </SmallContain>
+                        <SmallContain>
+                            <ListItems><Link to="/login">Login/SigIn</Link></ListItems>
+                        </SmallContain>
+                            <SmallContain>
+                            <ListItems><Link to="/addblog">Add blog</Link></ListItems>
+                        </SmallContain>
                     </ListUl>
                 </NavRight>
 

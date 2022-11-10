@@ -15,8 +15,7 @@ function App() {
     </Routes>
     </BrowserRouter>
     
-    // <>
-    // <p>gdjtdrdyugfuf7yf</p></>
+
   
   )
 }
