@@ -1,20 +1,18 @@
-import LoginItems from "../Components/LoginItems"
-import Nav from "../Components/Nav"
-import Footer from "../Components/FooterItems"
-import styled from "styled-components"
 
+import Nav from "../Components/Nav"
+import SingleBlog from "../Components/SingleBlog"
+import styled from "styled-components"
+import Footer from "../Components/FooterItems"
 
 const Container=styled.div``
 
-
-
- const LogIn = () => {
+ const Single = () => {
     return (
         <Container>
             <Nav/>
-            <LoginItems />   
+            <SingleBlog />
             <Footer/>
         </Container>
     )
  }
-export default LogIn;
+export default Single

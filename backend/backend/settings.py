@@ -1,3 +1,7 @@
+import os
+
+
+
 """
 Django settings for backend project.
 
@@ -40,6 +44,7 @@ INSTALLED_APPS = [
     'blog',
     'rest_framework',
      "corsheaders",
+     
 ]
 
 MIDDLEWARE = [
@@ -86,13 +91,13 @@ DATABASES = {
     }
 }
 
-REST_FRAMEWORK={
-    'DEFAULT_AUTHENTICATION_CLASSES': (
-        'rest_framework_simplejwt.authentication.JWTAuthentication',
-        'rest_framework.authentication.BasicAuthentication',
-        'rest_framework.authentication.SessionAuthentication',
-    ),
-}
+# REST_FRAMEWORK={
+#     'DEFAULT_AUTHENTICATION_CLASSES': (
+#         'rest_framework_simplejwt.authentication.JWTAuthentication',
+#         'rest_framework.authentication.BasicAuthentication',
+#         'rest_framework.authentication.SessionAuthentication',
+#     ),
+# }
 
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
@@ -141,3 +146,6 @@ CORS_ALLOWED_ORIGINS = [
     'http://localhost:3001',
     'http://localhost:3002',
 ]
+
+MEDIA_URL='/media/'
+MEDIA_ROOT=os.path.join(BASE_DIR,'media')
